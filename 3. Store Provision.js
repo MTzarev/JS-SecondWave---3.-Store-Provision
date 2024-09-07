@@ -11,21 +11,14 @@ function storeProvision(stock, order) {
             stock[idx] = Number(stock[idx]) + qty;
         }
     }
-    //let stockObj = Object.assign({}, stock)
-    //let stockObj = [stock].reduce((a,v)=>({...a, [v]: v}), {})
-    //let stockObj = {...Object.values(stock)}
     let stockObj = {};
     for (let i = 0; i < stock.length; i += 2) {
         stockObj[stock[i]] = stock[i + 1];
     }
-
-
     for (let [productName, qty] of Object.entries(stockObj)) {
         console.log(`${productName} -> ${qty}`);
-
     }
     console.log();
-
 }
 storeProvision([
     'Chips', '5', 'CocaCola', '9', 'Bananas', '14', 'Pasta', '4', 'Beer', '2'
