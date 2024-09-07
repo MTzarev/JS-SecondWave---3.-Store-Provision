@@ -9,7 +9,6 @@ function storeProvision(stock, order) {
         } else {
             let idx = stock.indexOf(productName) + 1;
             stock[idx] = Number(stock[idx]) + qty;
-
         }
     }
     //let stockObj = Object.assign({}, stock)
