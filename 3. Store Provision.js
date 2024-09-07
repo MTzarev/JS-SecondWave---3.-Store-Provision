@@ -3,7 +3,6 @@ function storeProvision(stock, order) {
     for (let i = 0; i < order.length; i += 2) {
         let productName = order[i];
         let qty = Number(order[i + 1]);
-
         if (!stock.includes(productName)) {
             stock.push(productName);
             stock.push(qty);
